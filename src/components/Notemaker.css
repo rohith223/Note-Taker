@@ -1,0 +1,179 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #7c90a7, #7c90a7); /* Gradient background */
+  color: #fff; /* White text color */
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Card list styles */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 10px; /* Adjust the gap between cards */
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Card form styles */
+.card-form {
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradient background */
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333; /* Dark text color */
+}
+
+.card-form input,
+.card-form textarea,
+.card-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.card-form button {
+  background: linear-gradient(to bottom, #007bff, #0056b3); /* Gradient button */
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-form button:hover {
+  background: linear-gradient(to bottom, #0056b3, #003e81); /* Darker gradient on hover */
+}
+
+/* Card styles */
+.card {
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9); /* Gradient background */
+  border-radius: 8px;
+  padding: 1rem; /* Smaller padding */
+  min-height: 200px; /* Slightly smaller card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 100%; /* Adjusted card width */
+  color: #333; /* Dark text color */
+}
+
+.card h2 {
+  font-size: 18px; /* Slightly smaller heading font size */
+  margin-bottom: 8px; /* Smaller margin */
+}
+
+.card p {
+  font-size: 14px; /* Slightly smaller text font size */
+  margin-bottom: 8px; /* Smaller margin */
+}
+
+/* Hover effect on cards */
+.card:hover {
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff); /* Reverse gradient on hover */
+  transform: translateY(-5px); /* Add a subtle lift effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Delete icon style */
+.delete-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #d9534f; /* Red delete icon color */
+}
+
+/* Filter bar styles */
+.filter-bar {
+  margin-bottom: 20px; /* Add margin to create space below the filter input */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-bar input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradient background */
+  transition: border-color 0.3s ease;
+}
+
+.filter-bar input:focus {
+  border-color: #007bff; /* Highlight the border on focus */
+}
+
+/* Textarea style */
+textarea {
+  border: none;
+  resize: none;
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Gradient textarea background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* Save button style (not used in code, but you can add it if needed) */
+.save {
+  background: linear-gradient(to bottom, #e1e1e1, #d1d1d1); /* Gradient button background */
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #333; /* Dark text color */
+}
+
+.save:hover {
+  background: linear-gradient(to bottom, #d1d1d1, #c0c0c0); /* Darker gradient on hover */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns for smaller screens */
+  }
+
+  .card-form {
+    max-width: 100%; /* Make the form full width on smaller screens */
+  }
+
+  .card {
+    width: 100%; /* Make cards full width on smaller screens */
+  }
+}
